@@ -1,0 +1,81 @@
+/* App.css */
+
+/* Container for the image and text */
+.image-container {
+  position: relative;   /* Position relative to use absolute positioning inside */
+  width: 100%;          /* Full width */
+  height: 100vh;        /* Full viewport height */
+  overflow: hidden;     /* Hide any overflow */
+  display: flex;        /* Flexbox for alignment */
+  justify-content: center;  /* Horizontally center the text */
+  align-items: center;      /* Vertically center the text */
+}
+
+/* Background Image Styling */
+.background-image {
+  width: 100%;          /* Full width */
+  height: 100%;         /* Full height */
+  object-fit: cover;    /* Cover the entire container */
+}
+.textBox
+{
+color: white;
+opacity:190% ;
+}
+/* Text Overlay Styling */
+.text-overlay {
+  position: absolute;   /* Positioned absolutely within the image container */
+  color: white;         /* Text color */
+  text-align: left;   /* Center the text horizontally */
+  background-color: transparent;  /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  height: 50%;   /* Rounded corners */
+  width: 80%;           /* Set a relative width for responsiveness */
+  max-width: 600px;  
+  margin-left: 20px;
+  left :7%; 
+  top:20%;
+  font-size: 150%;
+  opacity: 90%; /* Maximum width of the overlay */
+}
+
+/* Responsive adjustments using media queries */
+/* For small screens */
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 2em;     /* Adjust the font size for smaller screens */
+  }
+
+  .text-overlay p {
+    font-size: 1em;     /* Adjust paragraph size */
+  }
+
+  .text-overlay {
+    padding: 10px;      /* Reduce padding on smaller screens */
+  }
+
+  .image-container {
+    height: 70vh;       /* Reduce the image height on smaller screens */
+  }
+}
+
+/* For extra small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .text-overlay h1 {
+    font-size: 1.5em;   /* Further reduce the font size */
+  }
+
+  .text-overlay p {
+    font-size: 0.9em;
+  }
+
+  .text-overlay {
+    width: 90%;         /* Make overlay wider for small screens */
+    padding: 5px;       /* Reduce padding */
+  }
+
+  .image-container {
+    height: 60vh;       /* Further reduce image height for small screens */
+  }
+}
